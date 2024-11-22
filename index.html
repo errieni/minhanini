@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <style>
+        /* Estilos para a carta */
+        .carta {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            border: 5px solid black;
+            position: relative;
+            margin: 100px auto;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .carta:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilo para o coração */
+        .coracao {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%);
+            position: absolute;
+            top: 120px;
+            left: 180px;
+        }
+
+        /* Estilo para o texto */
+        .texto {
+            display: none;
+            font-size: 20px;
+            color: red;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Div que representa a carta -->
+    <div class="carta" onclick="mostrarTexto()">
+        <div class="coracao"></div>
+        <div class="texto" id="texto">EU TE AMO, MINHA NICK, TO MORRENDO DE SDD DE VOCÊ!!!</div>
+    </div>
+
+    <script>
+        // Função que mostra o texto quando a carta for clicada
+        function mostrarTexto() {
+            var texto = document.getElementById('texto');
+            texto.style.display = 'block'; // Exibe o texto
+        }
+    </script>
+
+</body>
+</html>
